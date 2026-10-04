@@ -1,0 +1,117 @@
+[0m21:52:11.872070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b591d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de42850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de42ad0>]}
+
+
+============================== 21:52:11.875204 | 2438f61a-26b3-4422-ae6d-4ce85cfe3236 ==============================
+[0m21:52:11.875204 [info ] [MainThread]: Running with dbt=1.12.3
+[0m21:52:11.875565 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'printer_width': '80', 'invocation_command': 'dbt init', 'maximum_seed_size_mib': '1', 'static_parser': 'True', 'profiles_dir': '/Users/adityodasgupta/.dbt', 'log_format': 'default', 'version_check': 'True', 'quiet': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'indirect_selection': 'eager', 'empty': 'None', 'hints_enabled': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'write_json': 'True', 'partial_parse': 'True'}
+[0m21:52:47.771734 [debug] [MainThread]: Starter project path: /Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/include/starter_project
+[0m21:52:47.786457 [info ] [MainThread]: Setting up your profile.
+[0m21:52:51.510792 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:52:51.511091 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:52:51.511250 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:55:06.514888 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+list index out of range
+[0m21:55:06.527092 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/cli/main.py", line 504, in init
+    results = task.run()
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/task/init.py", line 363, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/task/init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/task/init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/task/init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/task/init.py", line 117, in generate_target_from_input
+    choice = option_list[numeric_choice - 1]
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m21:55:06.553735 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 174.77136, "process_in_blocks": "0", "process_kernel_time": 0.304765, "process_mem_max_rss": "260390912", "process_out_blocks": "0", "process_user_time": 1.550577}
+[0m21:55:06.561863 [debug] [MainThread]: Command `dbt init` failed at 21:55:06.560985 after 174.78 seconds
+[0m21:55:06.565428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132a22060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a42c170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132aed8c0>]}
+[0m21:55:06.566966 [debug] [MainThread]: Flushing usage events
+[0m21:55:06.913574 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:58:20.712632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105991d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108542850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108542ad0>]}
+
+
+============================== 21:58:20.715884 | f75febef-5ec8-427a-89a5-5a5f41f2b6ab ==============================
+[0m21:58:20.715884 [info ] [MainThread]: Running with dbt=1.12.3
+[0m21:58:20.716245 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'debug': 'False', 'hints_enabled': 'True', 'log_format': 'default', 'printer_width': '80', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'target_path': 'None', 'fail_fast': 'False', 'introspect': 'True', 'log_path': 'logs', 'empty': 'None', 'warn_error': 'None', 'quiet': 'False', 'indirect_selection': 'eager', 'version_check': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'profiles_dir': '/Users/adityodasgupta/.dbt', 'log_cache_events': 'False'}
+[0m21:58:25.184766 [debug] [MainThread]: Starter project path: /Users/adityodasgupta/Documents/de-portfolio-project/.venv/lib/python3.14/site-packages/dbt/include/starter_project
+[0m21:58:25.198522 [info ] [MainThread]: Setting up your profile.
+[0m21:58:27.427036 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:58:27.427485 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:58:27.427656 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m22:00:48.511019 [info ] [MainThread]: Profile walmart_dbt written to /Users/adityodasgupta/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m22:00:48.520701 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m22:00:48.521935 [info ] [MainThread]: dbt version: 1.12.3
+[0m22:00:48.522296 [info ] [MainThread]: python version: 3.14.7
+[0m22:00:48.522615 [info ] [MainThread]: python path: /Users/adityodasgupta/Documents/de-portfolio-project/.venv/bin/python3.14
+[0m22:00:48.522939 [info ] [MainThread]: os info: macOS-14.1.2-arm64-arm-64bit-Mach-O
+[0m22:00:48.625860 [info ] [MainThread]: Using profiles dir at /Users/adityodasgupta/.dbt
+[0m22:00:48.626200 [info ] [MainThread]: Using profiles.yml file at /Users/adityodasgupta/.dbt/profiles.yml
+[0m22:00:48.626362 [info ] [MainThread]: Using dbt_project.yml file at /Users/adityodasgupta/Documents/de-portfolio-project/walmart_dbt/dbt_project.yml
+[0m22:00:48.626529 [info ] [MainThread]: adapter type: databricks
+[0m22:00:48.626664 [info ] [MainThread]: adapter version: 1.12.5
+[0m22:00:48.697936 [info ] [MainThread]: Configuration:
+[0m22:00:48.698214 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:00:48.698366 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:00:48.698511 [info ] [MainThread]: Required dependencies:
+[0m22:00:48.698738 [debug] [MainThread]: Executing "git --help"
+[0m22:00:48.706472 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:00:48.707041 [debug] [MainThread]: STDERR: "b''"
+[0m22:00:48.707233 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:00:48.707400 [info ] [MainThread]: Connection:
+[0m22:00:48.707589 [info ] [MainThread]:   host: dbc-eb456de1-0678.cloud.databricks.com
+[0m22:00:48.707733 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/0f0b42569aae79be
+[0m22:00:48.707865 [info ] [MainThread]:   catalog: walmart
+[0m22:00:48.707995 [info ] [MainThread]:   schema: silver
+[0m22:00:48.708418 [info ] [MainThread]: Registered adapter: databricks=1.12.5
+[0m22:00:48.801380 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m22:00:48.801772 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m22:00:49.113976 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type='workspace'): no
+[0m22:00:49.115198 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m22:00:49.116489 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m22:00:49.117414 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m22:00:49.118529 [debug] [MainThread]: Using databricks connection "debug"
+[0m22:00:49.118984 [debug] [MainThread]: On debug: select 1 as id
+[0m22:00:49.119338 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:00:49.905196 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1bc72-c23d-1328-bd00-4abbfd3fc5da) - Created
+[0m22:01:00.085028 [debug] [MainThread]: SQL status: OK in 10.960 seconds
+[0m22:01:00.087405 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f1bc72-c23d-1328-bd00-4abbfd3fc5da, command-id=01f1bc72-c274-191d-9db2-7a4803e2d58e) - Closing
+[0m22:01:00.390485 [debug] [MainThread]: On debug: Close
+[0m22:01:00.391347 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1bc72-c23d-1328-bd00-4abbfd3fc5da) - Closing
+[0m22:01:00.494029 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:01:00.494688 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:01:00.495360 [info ] [MainThread]: Your new dbt project "walmart_dbt" was created!
+Initialized new project in /Users/adityodasgupta/Documents/de-portfolio-project/walmart_dbt/walmart_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:01:00.499021 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 159.81274, "process_in_blocks": "0", "process_kernel_time": 0.410487, "process_mem_max_rss": "260997120", "process_out_blocks": "0", "process_user_time": 1.852162}
+[0m22:01:00.500529 [debug] [MainThread]: Command `dbt init` succeeded at 22:01:00.500403 after 159.81 seconds
+[0m22:01:00.501167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10818dcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ef34a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ecdead0>]}
+[0m22:01:00.501601 [debug] [MainThread]: Flushing usage events
+[0m22:01:00.983284 [debug] [MainThread]: An error was encountered while trying to flush usage events

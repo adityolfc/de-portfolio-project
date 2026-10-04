@@ -1,0 +1,22 @@
+adg:
+  outputs:
+    dev:
+      catalog: '1'
+      host: dbc-92e22e2e-4fa4.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/7ca63c9eda556b4a
+      schema: default
+      threads: 1
+      token: dapi3052940269fcf4638fa648cbd7ecbcba
+      type: databricks
+  target: dev
+walmart_dbt:
+  outputs:
+    dev:
+      catalog: walmart
+      host: dbc-eb456de1-0678.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/0f0b42569aae79be
+      schema: silver
+      threads: 1
+      token: dapi233043a148cd55f39ebf53a176fe5ba2
+      type: databricks
+  target: dev
